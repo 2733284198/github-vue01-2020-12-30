@@ -3,6 +3,9 @@
     <h1>{{ msg }}</h1>
     <h1>{{ site }}</h1>
     <h1>{{ details() }}</h1>
+    <button v-on:click="msgclick" >
+      点击按钮
+    </button>
   </div>
 </template>
 
@@ -20,9 +23,11 @@ export default {
   methods:{
     details:function () {
       return  this.site + " - 学的不仅是技术，更是梦想！";
+    },
+    msgclick:function () {
+      this.msg = "点击了按钮"
     }
   }
-
 }
 
 
